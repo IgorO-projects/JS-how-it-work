@@ -8,23 +8,23 @@
 
 // ******************************************************************************************************************
 
-// let order;
+let order;
 
-// do {
-//     order = prompt('Execute order 66');
-//     console.log(typeof order);
-//     order = Number(order);
+do {
+    order = prompt('Execute order 66');
+    console.log(typeof order);
+    
+    // в данном случае, в условии нужно присвоит значение, полученное от пользователя, и приобразить в число - Number(order) или +order! 
+    if (+(order) === 66) {
+        alert('Yes, my Lord!');
+        break;
+    } else if (order === null) {
+        alert('TRAITOR');
+    } else {
+        alert('DO IT!');
+    }
 
-//     if (order === 66) {
-//         alert('Yes, my Lord!');
-//         break;
-//     } else if (order !== null) {
-//         alert('TRAITOR');
-//     } else {
-//         alert('DO IT!');
-//     }
-
-// } while (order !== 66) 
+} while (order !== 66) 
 
 // ******************************************************************************************************************
 
