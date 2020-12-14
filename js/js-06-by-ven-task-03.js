@@ -1,6 +1,3 @@
-// Пример 07 сортировка цикла от меньшего значения к большему или от "а" до "я"
-// Используем bubbleSort. Вернуть отсортированную по "Алфавиту" не меняя исходный.
-
 const arr = ['HTML', 'JavaScript', 'Algol', 'CSS', 'Python', 'Basic'];
 
 const sortStringArray = (stringArray) => {
@@ -12,10 +9,11 @@ const sortStringArray = (stringArray) => {
 
              if(sortedArray[j] > sortedArray[j + 1]){
 
-                const temp = sortedArray[j];
+                // const temp = sortedArray[j];
 
-                sortedArray[j] = sortedArray[j + 1];
-                sortedArray[j + 1] = temp;
+                // sortedArray[j] = sortedArray[j + 1];
+                // sortedArray[j + 1] = temp;
+                [sortedArray[j], sortedArray[j + 1]] = [sortedArray[j + 1], sortedArray[j]];
              }
          }
     }
