@@ -3,8 +3,8 @@
 function getExtremeElements(array) {
     // Пиши код ниже этой строки
 const newArray = [];    
-newArray.push(array[0]);
-newArray.push(array[array.length - 1]);
+newArray.push(array[0], array[array.length - 1]);
+// newArray.push(array[array.length - 1]);
 return newArray;
 }
 // function getExtremeElements(array) {
