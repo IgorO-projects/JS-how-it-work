@@ -25,26 +25,29 @@ const Calculator = function () {
     }
 
 };
+//создали метод foo, который возводит степень, на самом объекте Number.
+Number.prototype.foo = function (n) {
+    let final = 1; 
+    for (let i = 1; i <= n; i++) {
+        final *= this;
+    }
+    return final;
+};
 
-// Number.prototype.foo = function (n) {
-//     // return this ** n; 
-//     let sum = 1;
-//     for (let i = 1; i <= n; i++) {
-//         sum *= this;
-//     }
-//     console.log(sum);
-//     return sum;
-//     }
-// const number = new Number(5);
-
-Calculator.prototype.pow = function () {
-return Number(this.a) ** Number(this.b); 
-// let sum = 1;
-// for (let i = 1; i <= n; i++) {
-//     sum *= this.a;
+Calculator.prototype.pow = function (n) {
+    let powFinal;
+    powFinal = Number(this.a).foo(n);
+    return powFinal;
+};
+//условие для работы если а - число, которое возводим в степень, b - сама степень.
+// Calculator.prototype.pow = function () {
+// return Number(this.a) ** Number(this.b); 
+// // let sum = 1;
+// // for (let i = 1; i <= n; i++) {
+// //     sum *= this.a;
+// // }
+// // return sum;
 // }
-// return sum;
-}
 
 // Calculator.prototype.pow = function (n) {
 //     return Number(this.a).foo(n);
@@ -58,9 +61,9 @@ return Number(this.a) ** Number(this.b);
 
 let calculator = new Calculator();
 calculator.read();
-// // alert( "Sum=" + calculator.sum() );
-// // alert( "Mult=" + calculator.mult() );
-alert( "Pow=" + calculator.pow());
+alert( "Sum=" + calculator.sum() );
+alert( "Mult=" + calculator.mult() );
+alert( "Pow=" + calculator.pow(3));
 
 
 
